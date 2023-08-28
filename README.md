@@ -3,7 +3,7 @@
 
 <h1 align="center">
   <br>
-  <a href="/"><img src="" alt="photo"></a>
+  <a href="/"><img src="https://github.com/Benny-752/Railway-Guard-AutoGate-System/blob/main/RAILWAY-GATE.jpeg" alt="photo"></a>
   <br>
   Circuit diagram 
   <br>
