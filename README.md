@@ -9,6 +9,15 @@
   <br>
 </h1>
 
+
+<h1 align="center">
+  <br>
+  <a href="/"><img src="" alt="Output_photo"></a>
+  <br>
+  Output 
+  <br>
+</h1>
+
 # Components Required:-
 1. PIC16F877A Microcontroller
 2. Servo Motor
