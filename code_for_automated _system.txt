@@ -1,0 +1,81 @@
+sbit LCD_RS at RD2_bit;
+sbit LCD_EN at RD3_bit;
+sbit LCD_D4 at RD4_bit;
+sbit LCD_D5 at RD5_bit;
+sbit LCD_D6 at RD6_bit;
+sbit LCD_D7 at RD7_bit;
+sbit LCD_RS_Direction at TRISD2_bit;
+sbit LCD_EN_Direction at TRISD3_bit;
+sbit LCD_D4_Direction at TRISD4_bit;
+sbit LCD_D5_Direction at TRISD5_bit;
+sbit LCD_D6_Direction at TRISD6_bit;
+sbit LCD_D7_Direction at TRISD7_bit;
+void f1()
+{
+      Lcd_Cmd(_LCD_CLEAR);
+      lcd_out(1,1,"Attention train");
+      lcd_out(2,1,"Near to crossing");
+      delay_ms(10);
+      portb=0b10101001;
+      delay_ms(10);
+       portb=0b00001001;
+      delay_ms(1300);
+      //delay_ms(100);
+      Lcd_Cmd(_LCD_CLEAR);
+      lcd_out(1,1,"Gate is Closed");
+      lcd_out(2,1,"Please Wait");
+}
+void f2()
+{
+      Lcd_Cmd(_LCD_CLEAR);
+      delay_ms(10);
+      lcd_out(1,1,"Start your Car");
+      lcd_out(2,1,"Gate is Opening");
+      delay_ms(10);
+      portb=0b11000010;
+      delay_ms(10);
+      portb=0b00010010;
+      delay_ms(2000);
+       portb=0b00010100;
+      Lcd_Cmd(_LCD_CLEAR);
+      lcd_out(1,1,"Gate is now Open");
+      lcd_out(2,1,"Safe journey");
+}
+void fun()
+{
+ int i,j;
+ Lcd_Cmd(_LCD_CLEAR);
+  lcd_out(1,1,"Time Left");
+ for(i=1,j=9;i<=10;i++,j--)
+ {
+   Lcd_Chr(2, 12, (j+'0'));
+   delay_ms(100);
+ }
+  f1();
+  delay_ms(1000);
+  Lcd_Cmd(_LCD_CLEAR);
+  lcd_out(1,1,"Time Left");
+  for(i=1,j=9;i<=10;i++,j--)
+ {
+   Lcd_Chr(2, 12, (j+'0'));
+   delay_ms(100);
+ }
+  f2();
+  delay_ms(1000);
+}
+void main()
+{
+  TRISd=0x00;
+  TRISC=0b11111111;
+  trisb=0b00000000;
+  portb=0b00010100;
+  lcd_init();
+  lcd_cmd(_LCD_CURSOR_OFF);
+  lcd_out(1,5,"Automated");
+  lcd_out(2,1,"Railway Crossing");
+  while(1)
+  {
+     delay_ms(1000);
+        fun();
+  }
+}
