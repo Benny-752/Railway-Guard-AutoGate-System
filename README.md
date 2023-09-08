@@ -2,7 +2,7 @@
  "Railway-Guard-AutoGate-System" is a technologically advanced solution designed to enhance the safety and efficiency of railway crossings. This system is designed to automatically manage and control the opening and closing of railway gates at level crossings, where roads intersect with railway tracks.
  <h1 align="center">
   <br>
-  <a href="/"><img src="https://i0.wp.com/railwaysyearbook.com/wp-content/uploads/2020/03/Manned-Level-Crossings.jpg?fit=660%2C448&ssl=1" alt="photo"></a>
+  <a href="/"><img src="https://i0.wp.com/railwaysyearbook.com/wp-content/uploads/2020/03/Manned-Level-Crossings.jpg" alt="photo"></a>
   <br>
   Auto-Gate 
   <br>
