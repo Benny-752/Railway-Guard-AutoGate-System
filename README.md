@@ -35,7 +35,7 @@
 7. Switch
 
 # Software Used In project
-1. Proteus 8 Professional
+- Proteus 8 Professional
 
 
 
